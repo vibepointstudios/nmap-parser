@@ -43,10 +43,10 @@ python3 -m pip install openpyxl
 
 ## Usage
 
-Place `parse_nmap_to_excel.py` in a directory containing Nmap output files, then run:
+Place `nmap_parser.py` in a directory containing Nmap output files, then run:
 
 ```bash
-python3 parse_nmap_to_excel.py
+python3 nmap_parser.py
 ```
 
 By default, the script reads from the current directory and writes:
@@ -58,7 +58,7 @@ parsed_nmap_results.xlsx
 You can also specify an input directory and output file:
 
 ```bash
-python3 parse_nmap_to_excel.py --input-dir /path/to/nmap-results --output report.xlsx
+python3 nmap_parser.py --input-dir /path/to/nmap-results --output report.xlsx
 ```
 
 If the output path is relative, it is created inside the input directory.
@@ -82,7 +82,7 @@ scan_results.gnmap
 Then generate the Excel workbook:
 
 ```bash
-python3 parse_nmap_to_excel.py --input-dir . --output scan_results.xlsx
+python3 nmap_parser.py --input-dir . --output scan_results.xlsx
 ```
 
 ## Input Files
@@ -108,10 +108,10 @@ At least one valid Nmap XML file is required.
 Clone the repository, install dependencies, and run the parser against a directory of sample Nmap outputs:
 
 ```bash
-git clone https://github.com/your-username/nmap-to-excel-parser.git
-cd nmap-to-excel-parser
+git clone https://github.com/your-username/nmap-parser.git
+cd nmap-parser
 python3 -m pip install openpyxl
-python3 parse_nmap_to_excel.py --input-dir samples --output sample_report.xlsx
+python3 nmap_parser.py --input-dir samples --output sample_report.xlsx
 ```
 
 ## Contributing
